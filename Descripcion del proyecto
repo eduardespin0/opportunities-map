@@ -1,0 +1,183 @@
+# Plan Maestro: Plataforma OpportunitiesMap
+
+OpportunitiesMap es un ecosistema digital compuesto por un portal web informativo de alto rendimiento y una presencia en redes sociales (Instagram) diseñado para conectar a estudiantes y jóvenes profesionales de todo el mundo con becas (*scholarships*), pasantías (*internships*), escuelas de verano (*summer schools*), intercambios y *fellowships*.
+
+El proyecto está concebido bajo 5 pilares estratégicos:
+1. **Propósito Informativo:** Centralizar y estructurar convocatorias globales con enlaces oficiales sin ofrecer asesoría personalizada directa.
+2. **Portafolio de Ingeniería de Software:** Código de nivel producción, tipado estricto, buenas prácticas, arquitectura limpia y documentación exhaustiva en GitHub para admisiones académicas y reclutamiento técnico.
+3. **Sinergia con Instagram:** Estrategia de contenidos, guía de marca para Canva Pro y generación de copys/carruseles.
+4. **Automatización Asistida por IA:** Herramienta integrada (CLI o script) que recibe enlaces/convocatorias en bruto y genera automáticamente el markdown/JSON estructurado y el copy para redes sociales usando IA.
+5. **Monetización Sostenible:** Optimización técnica para Google AdSense, boletín semanal (newsletter), marketing de afiliados y programas destacados.
+
+---
+
+## Filosofía de Diseño: Inspiración Funcional, Estética 100% Original y Premium
+
+Las capturas de referencia nos proporcionan la **arquitectura de información funcional** (cómo se organizan las categorías, la ficha de datos rápidos, los enlaces oficiales y la sinergia de banners con redes sociales). 
+
+Sin embargo, **no copiaremos la estética visual de blog tradicional (WordPress)**. En su lugar, diseñaremos una experiencia de software moderna, fluida y de nivel Silicon Valley para **OpportunitiesMap**:
+
+- **Estética Vanguardista:** Inspirada en plataformas SaaS de alto calibre (estilo Linear, Raycast o Notion educativo) con tarjetas de bordes sutiles, microinteracciones suaves al pasar el cursor, glassmorphism refinado, y una paleta de color sofisticada (azul marino profundo, cian luminoso, acentos esmeralda/ámbar para estados de financiamiento).
+- **Tipografía de Alta Gama:** Fuente moderna sans-serif (ej. *Inter* o *Plus Jakarta Sans*) con jerarquía visual nítida y legible.
+- **Interacciones Reactivas:** Búsqueda instantánea en vivo con teclado, selector de filtros mediante píldoras interactivas (*filter pills*), selector de modo oscuro/claro con transiciones fluidas.
+- **Diferenciador en GitHub y Académico:** En lugar de parecer un blog estándar con anuncios intrusivos, lucirá como una aplicación web de ingeniería pulida que impresionará a reclutadores, comités de posgrado y a los usuarios que lleguen desde Instagram.
+
+### 1. La Fórmula Visual (Conexión Directa Web ↔ Canva ↔ Instagram)
+- **El Banner Gráfico Central:** Cada convocatoria en OpportunitiesPedia cuenta con un banner distintivo que incluye:
+  - Logotipo oficial de la institución/universidad (ej. Stanford, UNICEF, Abertay).
+  - Bandera nacional del país de destino (🇬🇧 UK, 🇪🇸 España, 🇺🇸 USA, 🇹🇷 Turquía, 🇰🇷 Corea del Sur).
+  - Nivel de estudios (Pregrado, Maestría, Doctorado / *Undergraduate, Masters & PhD*).
+  - Etiqueta de financiamiento destacada (**FULLY FUNDED**).
+  - Cinta/Marca de agua con la URL del sitio web.
+- **Sinergia con Instagram:** Este mismo banner gráfico es el que se publica en Instagram como primera lámina (portada) del carrusel.
+- **Mejora en OpportunitiesMap:** Modernizaremos la estética. OpportunitiesPedia utiliza un diseño tipo blog de WordPress de 2018; nosotros crearemos una interfaz moderna, limpia, con tarjetas responsivas, modo oscuro/claro de alta fidelidad, micro-animaciones al hacer *hover*, y tiempos de carga instantáneos (sub-segundo con Next.js).
+
+### 2. Estructura de Secciones por Categorías (Grid Multicolumna)
+- **Columnas especializadas en Home:**
+  - 🎓 **Scholarships** (Becas de pregrado, posgrado y doctorado).
+  - 💼 **Internships** (Pasantías profesionales e investigación).
+  - 🌍 **Fellowships & Summer Schools** (Liderazgo, estancias de verano e intercambios).
+  - 💻 **Online Courses** (Cursos gratuitos con certificación: Stanford, UNICEF, Harvard, OpenLearn).
+- **Lista secundaria bajo cada destacada:** Títulos directos con miniaturas para alta densidad de información (ideal para retención y CTR de clics).
+- **Barra de navegación superior:** Logo con isotipo de mapa/globo, enlaces a categorías, buscador en vivo (icono de lupa) y switch de Modo Oscuro / Modo Claro (*Dark/Light Mode*).
+
+### 3. Anatomía de la Página de Detalle de Convocatoria (Single Post View)
+La 3ª captura muestra la página individual donde llega el usuario desde Google o Instagram:
+- **Barra superior fija (*Reading Bar*):** Muestra el estado *"READING: [Título de la Beca]"*, botones sociales de compartir rápido (WhatsApp, X, LinkedIn, Copiar link) y selector de tamaño de fuente.
+- **Tabla/Tarjeta de Ficha Técnica (*Quick Specs Summary*):**
+  - 📍 **Host Country:** País y ciudad (ej. Spain, Barcelona).
+  - 🏛️ **Host Institute:** Universidad o institución anfitriona (ej. CRG, Stanford, Oxford).
+  - 🎓 **Program Type / Degree:** Tipo de programa y grado académico.
+  - ⏳ **Program Duration:** Duración de la beca/pasantía.
+  - 💰 **Financial Coverage:** Cobertura (Pasaje aéreo, estipendio mensual, matrícula completa).
+  - 📅 **Application Deadline:** Fecha límite con contador o indicador de urgencia.
+- **Secciones estructuradas:**
+  1. *About the Program* (Resumen conciso).
+  2. *Financial Benefits* (Lista con checks de lo que incluye).
+  3. *Eligibility Criteria* (Requisitos claros para postular).
+  4. *Required Documents* (Pasaporte, CV, Cartas de recomendación, etc.).
+  5. *Official Application Portal* (Botón de llamada a la acción hacia el enlace oficial).
+- **Caja de Descargo de Responsabilidad (Disclaimer):**
+  - Mensaje claro al pie de la ficha: *"OpportunitiesMap es una plataforma independiente de difusión informativa. Las postulaciones se realizan exclusivamente en el portal oficial."*
+- **Oportunidades Relacionadas (*Related Opportunities*):**
+  - Enlaces internos tipo *"También te puede interesar: [Beca X]"* para reducir la tasa de rebote y disparar las páginas vistas (clave para AdSense).
+
+---
+
+## Decisiones Técnicas y Arquitectura Propuesta
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                       OpportunitiesMap                      │
+├──────────────────────────────┬──────────────────────────────┤
+│         FRONTEND WEB         │        PIPELINE DE IA        │
+│   Next.js 14+ (App Router)   │  Script Node/Python + Gemini │
+│   TypeScript + CSS Moderno   │  Extractor de convocatorias  │
+│   SSG / ISR (SEO Extremo)    │  Generador de copy Instagram │
+├──────────────────────────────┴──────────────────────────────┤
+│                     CAPA DE CONTENIDOS                      │
+│      Markdown / MDX / JSON estructurado (Git-based CMS)     │
+│   (Versionado en GitHub, cero costo de BD para arrancar)    │
+├─────────────────────────────────────────────────────────────┤
+│                 INFRAESTRUCTURA Y MONETIZACIÓN              │
+│       Vercel / Cloudflare Pages (Hosting gratuito)          │
+│       Google AdSense ready + Newsletter (Substack/Resend)   │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### 1. Stack Tecnológico del Portal Web
+- **Framework:** Next.js (React + TypeScript) con App Router.
+  - *¿Por qué?* Permite **SSG (Static Site Generation)** e **ISR (Incremental Static Regeneration)**. Cada oportunidad se pre-renderiza como HTML estático puro, logrando tiempos de carga sub-segundo, puntuación Lighthouse 100/100 y máxima indexación en Google (requisito indispensable para AdSense).
+- **Estilos:** CSS Vanilla estructurado (o TailwindCSS si se prefiere). CSS moderno con variables de diseño (tokens de diseño, dark/light mode suave, microinteracciones, glassmorphism elegante).
+- **Gestión de Datos:** Arquitectura *Git-based Content* (archivos Markdown/JSON estructurados con frontmatter).
+  - *Ventaja clave:* Todo el contenido vive en el repositorio de GitHub. No requiere pagar ni configurar bases de datos complejas al inicio, y cada nueva beca es un *commit* trazable.
+- **Buscador y Filtros en Tiempo Real:** Búsqueda instantánea en cliente por país de destino, categoría (Beca, Pasantía, etc.), cobertura (Totalmente financiada / Parcial), nivel (Pregrado, Maestría, Doctorado) y fecha límite (*deadline*).
+
+### 2. Pipeline de Automatización con IA (El factor diferencial para GitHub)
+Para destacar en tu portafolio académico/profesional, implementaremos una herramienta en `scripts/` (ej. `npm run ingest` o script de Node/Python):
+- **Input:** El usuario pega un enlace oficial o un texto de convocatoria.
+- **Proceso IA (Gemini API):**
+  1. Extrae y normaliza campos: Título, Tipo de Beca, Cobertura (*Fully Funded, Partially Funded*), Elegibilidad, Fecha Límite, Beneficios, Requisitos, Link Oficial.
+  2. Valida fechas y genera el archivo `.md` / `.json` con el slug optimizado para SEO.
+  3. Genera el **pack para Instagram**: texto para las láminas del carrusel de Canva (Lámina 1 Gancho, Lámina 2 Beneficios, Lámina 3 Requisitos, Lámina 4 Cómo aplicar) + Copy descriptivo con hashtags.
+- **Output:** La oportunidad queda lista en la web y el contenido listo para programar en Canva/Instagram en 1 minuto.
+
+### 3. Estrategia de Instagram y Sistema de Diseño (Canva Pro)
+- **Identidad de Marca:**
+  - *Nombre:* **OpportunitiesMap**
+  - *Eslogan sugerido:* *Mapping Global Opportunities for Ambitious Minds* / *Tu mapa de oportunidades globales*.
+  - *Paleta de color recomendada:* Azul marino institucional (`#0A192F` / `#0F172A`), Cyan/Azul vibrante tecnológico (`#0EA5E9`), Acento Dorado/Ámbar de excelencia académica (`#F59E0B`), y fondo limpio (`#F8FAFC`).
+  - *Tipografías (Google Fonts):* Plus Jakarta Sans / Inter para lectura limpia y Space Grotesk / Montserrat para títulos de alto impacto.
+- **Plantillas Canva Pro (Kit de Marca):**
+  - Formato Carrusel (1080x1350 px - 4:5 vertical, mayor retención en feed).
+  - Portada con bandera del país, etiqueta "FULLY FUNDED" destacada y título claro.
+  - Llamado a la acción: *"Enlace directo y convocatoria oficial en el link de nuestra bio (opportunitymaps.org/opp/slug)"*.
+
+### 4. Estrategia de Monetización y Sostenibilidad
+1. **Google AdSense:**
+   - La arquitectura cumplirá todas las políticas de AdSense: páginas de política de privacidad, términos de uso, descargo de responsabilidad (*Disclaimer*), página "About Us", navegación clara y contenido original estructurado de alto valor.
+2. **Boletín Semanal (Newsletter):**
+   - Captura de correos en el sitio web (alertas semanales de becas por cerrar).
+   - Monetizable a mediano plazo mediante patrocinios directos de universidades, cursos de idiomas (IELTS/TOEFL) o plataformas educativas.
+3. **Enlaces de Afiliados Éticos:**
+   - Servicios que los estudiantes necesitan: seguro de viaje para visas de estudiante, preparación de exámenes de idiomas, herramientas de traducción certificada o cuentas bancarias internacionales.
+4. **Descargo de Responsabilidad Legal (Crucial):**
+   - Banner y pie de página permanente: *"OpportunitiesMap es un portal estrictamente informativo independiente. No formamos parte de los comités de selección ni brindamos asesoría de postulación."*
+
+---
+
+## Fases Propuestas de Implementación
+
+### Fase 1: Identidad, Diseño y Arquitectura Base
+- Definición de la guía de estilos, paleta de colores y estructura de diseño.
+- Inicialización del proyecto Next.js 14+ con TypeScript en `c:\Users\Usuario\Proyectos\Proyecto OppMaps`.
+- Configuración de estructura limpia de carpetas modular (`src/components`, `src/lib`, `src/types`, `content/opportunities`).
+
+### Fase 2: Motor de Contenidos y Componentes Principales
+- Creación del esquema de datos `Opportunity` (TypeScript types + schema validation).
+- Desarrollo de componentes clave:
+  - **Navbar** interactivo con buscador global.
+  - **Hero Section** de alto impacto visual (estilo minimalista premium).
+  - **Filtros interactivos** (Categoría, Cobertura, País de destino, Grado académico, Estado del deadline).
+  - **Card de Oportunidad** con badges de estado (e.g., "Abierta", "Cierra pronto", "Fully Funded").
+  - **Página de Detalle de Oportunidad** (`/opportunities/[slug]`) con datos estructurados para Google (JSON-LD para SEO enriquecido), tabla de requisitos, botón oficial de postulación y botón para compartir.
+  - Páginas legales obligatorias: `About`, `Disclaimer`, `Privacy Policy`, `Terms`.
+
+### Fase 3: Pipeline de Ingesta Asistido por IA (Herramienta CLI / Script)
+- Script en TypeScript/Node utilizando el SDK oficial de Google Gemini (`@google/genai`).
+- Función para tomar texto/URL -> procesar con IA -> escribir automáticamente archivo Markdown/JSON en `content/opportunities/`.
+- Generador de plantillas de texto para Canva (slides 1 a 5) y pie de foto para Instagram con hashtags relevantes.
+
+### Fase 4: Optimización SEO, Performance y Preparación para GitHub
+- Generación dinámica de `sitemap.xml` y `robots.txt`.
+- Metadatos OpenGraph dinámicos para que al compartir un link en WhatsApp, LinkedIn o Twitter se vea una tarjeta atractiva con la beca.
+- Documentación completa en `README.md`:
+  - Insignias (badges), capturas de pantalla, arquitectura de software, guía de instalación local y despliegue en Vercel.
+  - Licencia de código abierto y directrices de contribución.
+
+---
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Elección de estilos:**
+> ¿Prefieres que utilicemos **CSS Vanilla / CSS Modules** (mayor control nativo y sin dependencias externas) o **TailwindCSS** (estándar de la industria moderno para desarrollo ágil en React)?
+> *(Nota: El stack recomendado por defecto es Next.js + TypeScript + CSS moderno o Tailwind según tu preferencia).*
+
+> [!NOTE]
+> **Idiomas de la plataforma:**
+> ¿El portal web y la cuenta de Instagram estarán en **Español**, **Inglés**, o con soporte **Bilingüe**?
+> Las cuentas como *Opportunities Corners* operan en inglés para una audiencia global masiva, pero el mercado hispanohablante tiene una demanda altísima y menos competencia estructurada. Ambas opciones son viables.
+
+---
+
+## Verification Plan
+
+### Verificación Local y Construcción
+- Ejecución de `npm run build` sin errores de compilación ni TypeScript.
+- Auditoría Lighthouse de Google en local / preview (buscando 95+ en Performance, Accesibilidad, SEO y Best Practices).
+- Prueba del script de IA (`scripts/ingest.ts`) procesando una beca de prueba (por ejemplo, *Chevening Scholarship* o *Fulbright*) y verificando que genere tanto la página web como el texto para Instagram.
+
+### Verificación de Responsive y UI
+- Inspección visual en pantallas móviles (375px - 414px) y de escritorio (1080p+).
+- Navegación fluida y funcionamiento de los filtros en tiempo real.
