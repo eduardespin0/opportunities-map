@@ -44,10 +44,10 @@ export async function POST(request: Request) {
       filename,
       source: 'local',
     });
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error en /api/upload:', error);
     return NextResponse.json(
-      { error: 'Error al subir la imagen en el servidor.' },
+      { error: 'Error del servidor: ' + (error?.message || String(error)) },
       { status: 500 }
     );
   }

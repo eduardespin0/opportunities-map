@@ -42,10 +42,16 @@ export default function PrivacyPage() {
         </p>
 
         <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-primary)' }}>
-          3. Cookies de Google DoubleClick DART (Google AdSense)
+          3. Proveedores Externos y Anuncios (Google AdSense)
         </h3>
         <p>
-          Google es uno de los proveedores externos en nuestro sitio. También utiliza cookies, conocidas como cookies de DART, para publicar anuncios a los visitantes de nuestro sitio en función de su visita a www.opportunitiesmap.com y otros sitios en Internet. Los visitantes pueden optar por rechazar el uso de cookies de DART visitando la Política de privacidad de la red de contenido y anuncios de Google en: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brand-primary)' }}>https://policies.google.com/technologies/ads</a>.
+          En OpportunitiesMap utilizamos Google AdSense para la monetización del sitio. Los proveedores de terceros, incluido Google, utilizan cookies para publicar anuncios basándose en las visitas anteriores que el usuario haya hecho a nuestro sitio web u otros sitios web de Internet.
+        </p>
+        <p>
+          El uso de cookies de publicidad permite a Google y a sus socios mostrar anuncios a nuestros usuarios basándose en sus visitas a nuestros sitios y/o a otros sitios de Internet. 
+        </p>
+        <p>
+          Usted (el usuario) puede inhabilitar la publicidad personalizada. Para ello, deberá acceder a la <strong>Configuración de anuncios de Google</strong> en: <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brand-primary)', textDecoration: 'underline' }}>https://www.google.com/settings/ads</a>. (También puede inhabilitar el uso de cookies para publicidad personalizada por parte de proveedores de terceros accediendo a www.aboutads.info).
         </p>
 
         <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-primary)' }}>

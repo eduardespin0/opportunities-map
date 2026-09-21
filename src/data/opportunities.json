@@ -1,1 +1,80 @@
-[]
+[
+  {
+    "eligibility": [
+      "Título de pregrado/Bachelor obtenido o por obtener antes del inicio del programa.",
+      "Rendimiento académico sobresaliente ubicado en el 10% superior del programa de pregrado (Grade A o equivalente).",
+      "Abierto a todas las nacionalidades.",
+      "Cumplimiento del requisito de idioma del programa de posgrado respectivo.",
+      "Admisión a un programa regular de maestría en ETH Zurich."
+    ],
+    "officialLink": "https://ethz.ch/students/en/studies/financial/scholarships/excellencescholarship.html",
+    "summary": "El Excellence Scholarship & Opportunity Programme (ESOP) de ETH Zurich apoya a estudiantes destacados nacionales e internacionales que desean cursar una maestría presencial en Suiza. La convocatoria está abierta a graduados universitarios con un desempeño académico sobresaliente que se ubiquen en el 10% superior de su promoción de pregrado. El programa proporciona financiamiento sustancial que incluye CHF 12,000 por semestre para cubrir gastos de manutención y estudio, junto con una exención completa de las tasas de matrícula universitaria durante los tres o cuatro semestres que dura el programa regular de posgrado.",
+    "id": "eth-zurich-excellence-scholarship-opportunity-programme-esop-2027-suiza-beca-completa-de-maestria",
+    "countryFlag": "🇨🇭",
+    "updatedAt": "2026-09-21T03:56:59.633Z",
+    "status": "published",
+    "bannerImageUrl": "/uploads/1789963011963-T_tulo.png",
+    "slug": "eth-zurich-excellence-scholarship-opportunity-programme-esop-2027-suiza-beca-completa-de-maestria",
+    "country": "Suiza",
+    "degreeLevel": [
+      "Master"
+    ],
+    "shortTitle": "ETH Zurich ESOP Master Scholarships",
+    "requiredDocuments": [
+      "Formulario de postulación en eApply.",
+      "Pre-propuesta de tesis de maestría original.",
+      "Dos cartas de recomendación de profesores universitarios.",
+      "Currículum vitae (CV).",
+      "Certificados de notas y título de pregrado.",
+      "Comprobante oficial de dominio del idioma del programa."
+    ],
+    "howToApply": [
+      "Verificar requisitos del programa de maestría elegido en ETH Zurich.",
+      "Elaborar la pre-propuesta de tesis de maestría según las normas formales de ESOP.",
+      "Tramitar las dos cartas de recomendación académica.",
+      "Ingresar al portal eApply entre el 1 y el 30 de noviembre de 2026.",
+      "Marcar la postulación a ESOP en la solicitud de admisión y adjuntar los recaudos.",
+      "Enviar la postulación antes del 30 de noviembre de 2026."
+    ],
+    "createdAt": "2026-09-21T03:20:00.565Z",
+    "financialBenefits": [
+      "Estipendio para gastos de manutención y estudio de CHF 12,000 por semestre.",
+      "Exención completa del pago de matrícula semestral (tuition fee waiver).",
+      "Asignación de mentores académicos y vinculación a la red de la ETH Foundation.",
+      "Participación en eventos y redes exclusivas de becarios ESOP."
+    ],
+    "bannerTheme": {
+      "accentColor": "#fbbf24",
+      "primaryColor": "#0284c7",
+      "badgeText": "SCHOLARSHIPS"
+    },
+    "about": [
+      "El Excellence Scholarship & Opportunity Programme (ESOP) es la iniciativa de financiamiento de mayor prestigio de ETH Zurich, diseñada para atraer y fomentar el talento de jóvenes investigadores sobresalientes de todo el mundo que inician estudios de Master of Science. El objetivo primordial es permitir que los estudiantes seleccionados se concentren por completo en su formación académica e investigación sin presiones financieras.",
+      "Convocado por la Eidgenössische Technische Hochschule Zürich y respaldado por donantes a través de la ETH Foundation, el programa sitúa a los becarios en una de las instituciones científicas y tecnológicas líderes a nivel global. Los beneficiarios acceden a laboratorios de investigación de vanguardia, redes académicas internacionales, eventos exclusivos y tutoría cercana por parte del cuerpo docente.",
+      "La selección es rigurosa y altamente competitiva. Las solicitudes son evaluadas por los comités de admisión de cada departamento y la decisión final corresponde a la Comisión de Becas del Rectorado de ETH Zurich, basándose en la excelencia del expediente previo, la solidez de una propuesta de tesis original y cartas de recomendación académica."
+    ],
+    "deadline": "2026-11-30",
+    "institutionLogoText": "ETH Zurich",
+    "city": "Zúrich",
+    "tags": [
+      "Suiza",
+      "ETH Zurich",
+      "Maestría",
+      "ESOP",
+      "Fully Funded",
+      "Becas Internacionales",
+      "Postgrado",
+      "STEM"
+    ],
+    "fundingType": "Fully Funded",
+    "institutionLogoUrl": "",
+    "institution": "Eidgenössische Technische Hochschule Zürich (ETH Zurich)",
+    "countryCode": "GL",
+    "duration": "3 - 4 semestres",
+    "publishedAt": "2026-09-21",
+    "isUrgent": false,
+    "title": "ETH Zurich Excellence Scholarship & Opportunity Programme (ESOP) 2027 – Suiza (Beca completa de maestría)",
+    "featured": true,
+    "category": "scholarships"
+  }
+]
