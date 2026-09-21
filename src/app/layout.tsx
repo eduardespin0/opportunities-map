@@ -63,12 +63,8 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#0D306B" />
         <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7056389318202994"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7056389318202994"
+     crossOrigin="anonymous"></script>
       </head>
       <body>
         <Navbar />
