@@ -148,8 +148,22 @@ export const OpportunityStore = {
    */
   async delete(id: string): Promise<boolean> {
     try {
+      // 1. Intento de eliminación directa por doc ID
       const docRef = doc(db, 'opportunities', id);
       await deleteDoc(docRef);
+
+      // 2. Por si el documento en Firestore fue guardado con slug o id distinto
+      const qSlug = query(collection(db, 'opportunities'), where('slug', '==', id));
+      const snapSlug = await getDocs(qSlug);
+      for (const d of snapSlug.docs) {
+        await deleteDoc(d.ref);
+      }
+
+      const qId = query(collection(db, 'opportunities'), where('id', '==', id));
+      const snapId = await getDocs(qId);
+      for (const d of snapId.docs) {
+        await deleteDoc(d.ref);
+      }
     } catch (error) {
       console.error('Error eliminando de Firestore:', error);
       throw error;
@@ -157,7 +171,7 @@ export const OpportunityStore = {
 
     // Actualizar respaldo local
     const list = readLocalJson();
-    const filtered = list.filter((o) => o.id !== id);
+    const filtered = list.filter((o) => o.id !== id && o.slug !== id);
     writeLocalJson(filtered);
 
     return true;

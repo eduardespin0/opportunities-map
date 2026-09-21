@@ -228,9 +228,10 @@ export default function AdminDashboardPage() {
             >
               <option value="all">Todas las Categorías</option>
               <option value="scholarships">Becas (Scholarships)</option>
-              <option value="internships">Pasantías (Internships)</option>
-              <option value="fellowships">Fellowships</option>
+              <option value="internships">Internships</option>
+              <option value="fellowships">Fellowships y Liderazgo</option>
               <option value="courses">Cursos Online</option>
+              <option value="others">Otras Oportunidades</option>
             </select>
 
             <select
@@ -319,11 +320,34 @@ export default function AdminDashboardPage() {
                           </div>
                         )}
                       </td>
-                      <td>
-                        <div style={{ fontWeight: 700, color: 'var(--text-primary)', marginBottom: '3px' }}>
+                      <td style={{ maxWidth: '300px' }}>
+                        <div 
+                          style={{ 
+                            fontWeight: 700, 
+                            color: 'var(--text-primary)', 
+                            marginBottom: '3px',
+                            display: '-webkit-box',
+                            WebkitLineClamp: 2,
+                            WebkitBoxOrient: 'vertical',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis'
+                          }}
+                          title={opp.title}
+                        >
                           {opp.title}
                         </div>
-                        <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+                        <div 
+                          style={{ 
+                            fontSize: '0.8rem', 
+                            color: 'var(--text-muted)',
+                            display: '-webkit-box',
+                            WebkitLineClamp: 2,
+                            WebkitBoxOrient: 'vertical',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis'
+                          }}
+                          title={opp.institution}
+                        >
                           {opp.institution}
                         </div>
                       </td>

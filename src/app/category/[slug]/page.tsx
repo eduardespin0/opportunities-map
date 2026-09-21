@@ -5,19 +5,11 @@ import { GraduationCap } from 'lucide-react';
 import { OpportunityStore } from '../../../lib/opportunity-store';
 import OpportunityCard from '../../../components/OpportunityCard';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 interface CategoryPageProps {
   params: Promise<{ slug: string }>;
-}
-
-export async function generateStaticParams() {
-  return [
-    { slug: 'scholarships' },
-    { slug: 'internships' },
-    { slug: 'fellowships' },
-    { slug: 'courses' },
-    { slug: 'exchanges' },
-    { slug: 'others' },
-  ];
 }
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {

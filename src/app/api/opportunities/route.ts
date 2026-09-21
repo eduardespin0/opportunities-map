@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { OpportunityStore } from '@/lib/opportunity-store';
 import { Opportunity } from '@/lib/types';
+
+export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
@@ -68,6 +71,12 @@ export async function POST(request: Request) {
     };
 
     const saved = await OpportunityStore.save(newOpportunity);
+
+    try {
+      revalidatePath('/', 'layout');
+    } catch (e) {
+      console.warn('revalidatePath error:', e);
+    }
 
     return NextResponse.json(
       { success: true, message: 'Oportunidad creada exitosamente.', opportunity: saved },

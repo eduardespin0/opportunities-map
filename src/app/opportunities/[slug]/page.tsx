@@ -19,15 +19,11 @@ import SpecsBox from '../../../components/SpecsBox';
 import ShareBar from '../../../components/ShareBar';
 import OpportunityCard from '../../../components/OpportunityCard';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 interface PageProps {
   params: Promise<{ slug: string }>;
-}
-
-export async function generateStaticParams() {
-  const opportunities = await OpportunityStore.getAll();
-  return opportunities.map((opp) => ({
-    slug: opp.slug,
-  }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

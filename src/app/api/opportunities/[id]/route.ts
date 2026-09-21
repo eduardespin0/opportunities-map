@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { OpportunityStore } from '@/lib/opportunity-store';
 import { Opportunity } from '@/lib/types';
+
+export const dynamic = 'force-dynamic';
 
 interface RouteContext {
   params: Promise<{ id: string }>;
@@ -52,6 +55,12 @@ export async function PUT(request: Request, context: RouteContext) {
 
     const saved = await OpportunityStore.save(updated);
 
+    try {
+      revalidatePath('/', 'layout');
+    } catch (e) {
+      console.warn('revalidatePath error:', e);
+    }
+
     return NextResponse.json({
       success: true,
       message: 'Convocatoria actualizada con éxito.',
@@ -79,6 +88,15 @@ export async function DELETE(request: Request, context: RouteContext) {
     }
 
     await OpportunityStore.delete(existing.id);
+    if (existing.slug && existing.slug !== existing.id) {
+      await OpportunityStore.delete(existing.slug);
+    }
+
+    try {
+      revalidatePath('/', 'layout');
+    } catch (e) {
+      console.warn('revalidatePath error:', e);
+    }
 
     return NextResponse.json({
       success: true,

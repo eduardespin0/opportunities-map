@@ -6,6 +6,9 @@ import CategoryColumn from '../components/CategoryColumn';
 import UrgentTicker from '../components/UrgentTicker';
 import OpportunityCard from '../components/OpportunityCard';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export default async function HomePage() {
   const allOpps = (await OpportunityStore.getAll()).filter((opp) => opp.status !== 'draft');
 
