@@ -1,61 +1,93 @@
 [
   {
-    "eligibility": [
-      "Título de pregrado/Bachelor obtenido o por obtener antes del inicio del programa.",
-      "Rendimiento académico sobresaliente ubicado en el 10% superior del programa de pregrado (Grade A o equivalente).",
-      "Abierto a todas las nacionalidades.",
-      "Cumplimiento del requisito de idioma del programa de posgrado respectivo.",
-      "Admisión a un programa regular de maestría en ETH Zurich."
-    ],
-    "officialLink": "https://ethz.ch/students/en/studies/financial/scholarships/excellencescholarship.html",
-    "summary": "El Excellence Scholarship & Opportunity Programme (ESOP) de ETH Zurich apoya a estudiantes destacados nacionales e internacionales que desean cursar una maestría presencial en Suiza. La convocatoria está abierta a graduados universitarios con un desempeño académico sobresaliente que se ubiquen en el 10% superior de su promoción de pregrado. El programa proporciona financiamiento sustancial que incluye CHF 12,000 por semestre para cubrir gastos de manutención y estudio, junto con una exención completa de las tasas de matrícula universitaria durante los tres o cuatro semestres que dura el programa regular de posgrado.",
-    "id": "eth-zurich-excellence-scholarship-opportunity-programme-esop-2027-suiza-beca-completa-de-maestria",
-    "countryFlag": "🇨🇭",
-    "updatedAt": "2026-09-21T03:56:59.633Z",
+    "officialLink": "https://www.mundusmapp.org/",
+    "institutionLogoText": "Mundus MAPP",
     "status": "published",
-    "bannerImageUrl": "/uploads/1789963011963-T_tulo.png",
-    "slug": "eth-zurich-excellence-scholarship-opportunity-programme-esop-2027-suiza-beca-completa-de-maestria",
-    "country": "Suiza",
+    "shortTitle": "Becas de Maestría Mundus MAPP en Políticas Públicas",
+    "bannerImageUrl": "https://i.postimg.cc/9Frzxs6J/Titulo.png",
+    "countryFlag": "🌍",
+    "id": "erasmus-mundus-master-s-program-in-public-policy-mundus-mapp-2027-2029-en-europa-becas-completas-de-maestria",
+    "duration": "2 años",
+    "institutionLogoUrl": "",
+    "countryCode": "GL",
+    "requiredDocuments": [
+      "Formulario de solicitud oficial completado en línea.",
+      "Currículum Vitae actualizado (preferiblemente en formato Europass o formato académico estandarizado en inglés).",
+      "Título universitario oficial de grado (o constancia institucional de estar cursando el último año académico).",
+      "Expedientes académicos oficiales (Academic Transcripts) con detalle de asignaturas cursadas, calificaciones y escala evaluativa.",
+      "Traducciones oficiales al inglés de diplomas y certificados expedidos en otros idiomas.",
+      "Carta de motivación / Declaración de propósito (Statement of Purpose) explicando el interés académico, la elección justificada de los tracks de movilidad y los planes profesionales futuros.",
+      "Dos cartas de recomendación confidenciales suscritas por académicos o supervisores profesionales relevantes.",
+      "Certificado oficial de competencia en lengua inglesa vigente.",
+      "Copia legible del pasaporte vigente (página de identidad y datos biográficos).",
+      "Muestra de redacción académica (Writing sample o ensayo corto, según lo requiera el track de movilidad seleccionado)."
+    ],
+    "financialBenefits": [
+      "Exención total (100% tuition waiver) para becarios Erasmus Mundus, o exención parcial del costo de matrícula según mérito académico para beneficiarios de ayudas del consorcio.",
+      "Asignación mensual para gastos de manutención (referencia estándar de hasta 1.400 EUR al mes) durante la duración oficial del programa (hasta 24 meses).",
+      "Cobertura de seguro médico, de viaje y de accidentes durante los dos años de estancia en Europa, alineada con los estándares de la Comisión Europea.",
+      "Apoyo o asignación integral de viaje e instalación para facilitar la movilidad entre países sedes.",
+      "Obtención de título oficial de posgrado doble o conjunto reconocido en todo el Espacio Europeo de Educación Superior (EEES).",
+      "Acceso a pasantías curriculares supervisadas y redes de contactos profesionales en organismos internacionales, administraciones públicas y organizaciones no gubernamentales."
+    ],
+    "city": "Varias ciudades (Viena, Barcelona, La Haya y York)",
+    "slug": "erasmus-mundus-master-s-program-in-public-policy-mundus-mapp-2027-2029-en-europa-becas-completas-de-maestria",
+    "publishedAt": "2026-09-22",
+    "createdAt": "2026-09-22T23:52:31.744Z",
+    "isUrgent": false,
+    "country": "Austria, España, Países Bajos y Reino Unido",
+    "updatedAt": "2026-09-23T01:04:18.057Z",
+    "bannerTheme": {
+      "badgeText": "SCHOLARSHIPS",
+      "accentColor": "#fbbf24",
+      "primaryColor": "#0284c7"
+    },
+    "title": "Erasmus Mundus Master’s Program in Public Policy (Mundus MAPP) 2027–2029 en Europa",
+    "tags": [
+      "Mundus MAPP",
+      "Erasmus Mundus",
+      "Políticas Públicas",
+      "Maestría",
+      "Europa",
+      "Beca Completa",
+      "Posgrado Internacional",
+      "Presencial."
+    ],
+    "category": "scholarships",
+    "howToApply": [
+      "Gestionar con anticipación las transcripciones oficiales, traducciones juradas, cartas de recomendación y rendir la prueba oficial de inglés.",
+      "Ingresar al portal de admisiones centralizado del consorcio (administrado técnicamente a través de la plataforma de admisiones de CEU en nombre de Mundus MAPP).",
+      "Crear usuario, diligenciar datos personales, antecedentes académicos y detallar las trayectorias de movilidad elegidas.",
+      "Marcar expresamente en la misma solicitud el casillero de postulación a la beca Erasmus Mundus / Consortium Financial Aid.",
+      "Subir los documentos de soporte requeridos en formato PDF cumpliendo con los estándares de formato y peso permitidos.",
+      "Enviar la postulación antes del cierre formal del plazo estipulado para solicitantes de beca y guardar el comprobante digital de recepción."
+    ],
+    "institution": "Mundus MAPP Consortium",
+    "about": [
+      "Mundus MAPP es un programa de maestría internacional de dos años (120 ECTS) respaldado por la Comisión Europea a través de la iniciativa Erasmus Mundus. Su objetivo principal es formar a la próxima generación de analistas, formuladores de políticas y líderes del sector público y no gubernamental, combinando rigor conceptual, análisis empírico comparativo y herramientas prácticas de gestión e intervención pública a escala global, regional y nacional.",
+      "El programa es administrado y dictado conjuntamente por un consorcio de cuatro instituciones europeas de educación superior: Central European University (Austria), Institut Barcelona d’Estudis Internacionals (España), International Institute of Social Studies of Erasmus University Rotterdam (Países Bajos) y University of York (Reino Unido). Cada estudiante cursa el primer año en una universidad del consorcio y el segundo año en otra, seleccionando entre cuatro trayectorias de movilidad especializadas: Global Public Policy (CEU–IBEI), European Public Policy (CEU–York), Political Economy and Development (ISS–IBEI) o Governance and Development (ISS–York).",
+      "La experiencia formativa integra cursos avanzados, talleres metodológicos, viajes de estudio a centros de decisión política europeos e internacionales y una pasantía profesional obligatoria (internship) en organizaciones internacionales, agencias gubernamentales, centros de pensamiento o entidades de la sociedad civil. Al culminar el plan de estudios, los graduados reciben un título conjunto o doble titulación oficial expedida por las dos universidades anfitrionas.",
+      "El proceso de admisión y selección es centralizado y altamente competitivo, basándose en la excelencia académica previa, la claridad de objetivos profesionales y de investigación, la solidez de las recomendaciones y el dominio del idioma de instrucción."
+    ],
+    "featured": false,
+    "fundingType": "Fully Funded",
     "degreeLevel": [
       "Master"
     ],
-    "shortTitle": "ETH Zurich ESOP Master Scholarships",
-    "requiredDocuments": [
-      "Formulario de postulación en eApply.",
-      "Pre-propuesta de tesis de maestría original.",
-      "Dos cartas de recomendación de profesores universitarios.",
-      "Currículum vitae (CV).",
-      "Certificados de notas y título de pregrado.",
-      "Comprobante oficial de dominio del idioma del programa."
-    ],
-    "howToApply": [
-      "Verificar requisitos del programa de maestría elegido en ETH Zurich.",
-      "Elaborar la pre-propuesta de tesis de maestría según las normas formales de ESOP.",
-      "Tramitar las dos cartas de recomendación académica.",
-      "Ingresar al portal eApply entre el 1 y el 30 de noviembre de 2026.",
-      "Marcar la postulación a ESOP en la solicitud de admisión y adjuntar los recaudos.",
-      "Enviar la postulación antes del 30 de noviembre de 2026."
-    ],
-    "createdAt": "2026-09-21T03:20:00.565Z",
-    "financialBenefits": [
-      "Estipendio para gastos de manutención y estudio de CHF 12,000 por semestre.",
-      "Exención completa del pago de matrícula semestral (tuition fee waiver).",
-      "Asignación de mentores académicos y vinculación a la red de la ETH Foundation.",
-      "Participación en eventos y redes exclusivas de becarios ESOP."
-    ],
-    "bannerTheme": {
-      "accentColor": "#fbbf24",
-      "primaryColor": "#0284c7",
-      "badgeText": "SCHOLARSHIPS"
-    },
-    "about": [
-      "El Excellence Scholarship & Opportunity Programme (ESOP) es la iniciativa de financiamiento de mayor prestigio de ETH Zurich, diseñada para atraer y fomentar el talento de jóvenes investigadores sobresalientes de todo el mundo que inician estudios de Master of Science. El objetivo primordial es permitir que los estudiantes seleccionados se concentren por completo en su formación académica e investigación sin presiones financieras.",
-      "Convocado por la Eidgenössische Technische Hochschule Zürich y respaldado por donantes a través de la ETH Foundation, el programa sitúa a los becarios en una de las instituciones científicas y tecnológicas líderes a nivel global. Los beneficiarios acceden a laboratorios de investigación de vanguardia, redes académicas internacionales, eventos exclusivos y tutoría cercana por parte del cuerpo docente.",
-      "La selección es rigurosa y altamente competitiva. Las solicitudes son evaluadas por los comités de admisión de cada departamento y la decisión final corresponde a la Comisión de Becas del Rectorado de ETH Zurich, basándose en la excelencia del expediente previo, la solidez de una propuesta de tesis original y cartas de recomendación académica."
-    ],
-    "deadline": "2026-11-30",
-    "institutionLogoText": "ETH Zurich",
-    "city": "Zúrich",
+    "summary": "El programa conjunto Erasmus Mundus Master’s Program in Public Policy (Mundus MAPP) ofrece becas internacionales integrales y parciales para cursar una maestría presencial de dos años en políticas públicas, gobernanza y desarrollo. La convocatoria está abierta a graduados universitarios de cualquier país con título en ciencias sociales o campos afines y dominio certificado de inglés. Los estudios se cursan en dos prestigiosas universidades europeas del consorcio en Austria, España, Países Bajos o Reino Unido. La beca de excelencia incluye la exención total de matrícula, estipendio mensual para manutención y seguro médico internacional integral durante los veinticuatro meses del programa.",
+    "deadline": "2027-01-15",
+    "eligibility": [
+      "Abierto a postulantes de cualquier país del mundo (tanto de países del programa como de países asociados a Erasmus+).",
+      "Título universitario de grado (Bachelor's degree o equivalente a un mínimo de 180 ECTS) completado al momento de iniciar el programa.",
+      "Titulación previa en ciencias sociales, ciencia política, relaciones internacionales, economía, derecho, sociología, administración pública u otras disciplinas afines.",
+      "Expediente académico de primer nivel (equivalente a First Class Honours, Upper Second Class Honours o promedio ponderado de al menos 3.0 sobre 4.0 / B+ según escala del país de origen).",
+      "Dominio operativo certificado del idioma inglés en nivel C1/B2 avanzado. Pruebas aceptadas habitualmente: IELTS Academic: puntaje mínimo global de 6.5 a 7.0 (con requisitos específicos por banda según la universidad asignada), TOEFL iBT: puntaje mínimo habitual entre 90 y 100 puntos. Certificados equivalentes de Cambridge (C1 Advanced / C2 Proficiency).",
+      "Se valora positivamente contar con experiencia profesional o de voluntariado en formulación de políticas, servicio público, desarrollo u organizaciones internacionales.",
+      "No haber sido beneficiario con anterioridad de una beca Erasmus Mundus para el mismo nivel de estudios (máster). Cumplir con las normativas de movilidad territorial fijadas por el programa."
+    ]
+  },
+  {
+    "officialLink": "https://ethz.ch/students/en/studies/financial/scholarships/excellencescholarship.html",
     "tags": [
       "Suiza",
       "ETH Zurich",
@@ -66,15 +98,70 @@
       "Postgrado",
       "STEM"
     ],
-    "fundingType": "Fully Funded",
-    "institutionLogoUrl": "",
+    "summary": "El Excellence Scholarship & Opportunity Programme (ESOP) de ETH Zurich apoya a estudiantes destacados nacionales e internacionales que desean cursar una maestría presencial en Suiza. La convocatoria está abierta a graduados universitarios con un desempeño académico sobresaliente que se ubiquen en el 10% superior de su promoción de pregrado. El programa proporciona financiamiento sustancial que incluye CHF 12,000 por semestre para cubrir gastos de manutención y estudio, junto con una exención completa de las tasas de matrícula universitaria durante los tres o cuatro semestres que dura el programa regular de posgrado.",
+    "shortTitle": "ETH Zurich ESOP Master Scholarships",
+    "bannerImageUrl": "/uploads/1789963011963-T_tulo.png",
+    "category": "scholarships",
+    "status": "published",
+    "bannerTheme": {
+      "badgeText": "SCHOLARSHIPS",
+      "primaryColor": "#0284c7",
+      "accentColor": "#fbbf24"
+    },
+    "about": [
+      "El Excellence Scholarship & Opportunity Programme (ESOP) es la iniciativa de financiamiento de mayor prestigio de ETH Zurich, diseñada para atraer y fomentar el talento de jóvenes investigadores sobresalientes de todo el mundo que inician estudios de Master of Science. El objetivo primordial es permitir que los estudiantes seleccionados se concentren por completo en su formación académica e investigación sin presiones financieras.",
+      "Convocado por la Eidgenössische Technische Hochschule Zürich y respaldado por donantes a través de la ETH Foundation, el programa sitúa a los becarios en una de las instituciones científicas y tecnológicas líderes a nivel global. Los beneficiarios acceden a laboratorios de investigación de vanguardia, redes académicas internacionales, eventos exclusivos y tutoría cercana por parte del cuerpo docente.",
+      "La selección es rigurosa y altamente competitiva. Las solicitudes son evaluadas por los comités de admisión de cada departamento y la decisión final corresponde a la Comisión de Becas del Rectorado de ETH Zurich, basándose en la excelencia del expediente previo, la solidez de una propuesta de tesis original y cartas de recomendación académica."
+    ],
+    "updatedAt": "2026-09-22T23:55:18.016Z",
     "institution": "Eidgenössische Technische Hochschule Zürich (ETH Zurich)",
-    "countryCode": "GL",
-    "duration": "3 - 4 semestres",
-    "publishedAt": "2026-09-21",
-    "isUrgent": false,
-    "title": "ETH Zurich Excellence Scholarship & Opportunity Programme (ESOP) 2027 – Suiza (Beca completa de maestría)",
+    "deadline": "2026-11-30",
+    "eligibility": [
+      "Título de pregrado/Bachelor obtenido o por obtener antes del inicio del programa.",
+      "Rendimiento académico sobresaliente ubicado en el 10% superior del programa de pregrado (Grade A o equivalente).",
+      "Abierto a todas las nacionalidades.",
+      "Cumplimiento del requisito de idioma del programa de posgrado respectivo.",
+      "Admisión a un programa regular de maestría en ETH Zurich."
+    ],
+    "country": "Suiza",
+    "fundingType": "Fully Funded",
     "featured": true,
-    "category": "scholarships"
+    "degreeLevel": [
+      "Master"
+    ],
+    "title": "ETH Zurich Excellence Scholarship & Opportunity Programme (ESOP) 2027 – Suiza",
+    "institutionLogoUrl": "",
+    "createdAt": "2026-09-21T03:20:00.565Z",
+    "countryFlag": "🇨🇭",
+    "countryCode": "GL",
+    "requiredDocuments": [
+      "Formulario de postulación en eApply.",
+      "Pre-propuesta de tesis de maestría original.",
+      "Dos cartas de recomendación de profesores universitarios.",
+      "Currículum vitae (CV).",
+      "Certificados de notas y título de pregrado.",
+      "Comprobante oficial de dominio del idioma del programa."
+    ],
+    "financialBenefits": [
+      "Estipendio para gastos de manutención y estudio de CHF 12,000 por semestre.",
+      "Exención completa del pago de matrícula semestral (tuition fee waiver).",
+      "Asignación de mentores académicos y vinculación a la red de la ETH Foundation.",
+      "Participación en eventos y redes exclusivas de becarios ESOP."
+    ],
+    "duration": "3 - 4 semestres",
+    "id": "eth-zurich-excellence-scholarship-opportunity-programme-esop-2027-suiza-beca-completa-de-maestria",
+    "slug": "eth-zurich-excellence-scholarship-opportunity-programme-esop-2027-suiza-beca-completa-de-maestria",
+    "city": "Zúrich",
+    "isUrgent": false,
+    "howToApply": [
+      "Verificar requisitos del programa de maestría elegido en ETH Zurich.",
+      "Elaborar la pre-propuesta de tesis de maestría según las normas formales de ESOP.",
+      "Tramitar las dos cartas de recomendación académica.",
+      "Ingresar al portal eApply entre el 1 y el 30 de noviembre de 2026.",
+      "Marcar la postulación a ESOP en la solicitud de admisión y adjuntar los recaudos.",
+      "Enviar la postulación antes del 30 de noviembre de 2026."
+    ],
+    "publishedAt": "2026-09-21",
+    "institutionLogoText": "ETH Zurich"
   }
 ]

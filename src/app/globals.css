@@ -812,6 +812,7 @@ button {
   border: 1px solid var(--border-subtle);
   padding: 32px;
   margin: 48px 0;
+  box-sizing: border-box;
 }
 
 .section-header-row {
@@ -832,8 +833,9 @@ button {
 
 .courses-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 20px;
+  width: 100%;
 }
 
 .course-card {
@@ -841,6 +843,9 @@ button {
   border-radius: var(--radius-md);
   overflow: hidden;
   height: 200px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -867,6 +872,35 @@ button {
 .course-card-content {
   position: relative;
   z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .courses-section {
+    padding: 20px 16px;
+    margin: 32px 0;
+    border-radius: var(--radius-md);
+  }
+
+  .section-header-row {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .course-card {
+    height: auto;
+    min-height: 180px;
+    padding: 18px 16px;
+  }
 }
 
 /* Newsletter / Alert Box */

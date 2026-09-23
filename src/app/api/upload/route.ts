@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
-import { writeFile, mkdir } from 'fs/promises';
-import path from 'path';
+
+const IMGBB_API_KEY = process.env.IMGBB_API_KEY || 'fb03f1b10a6cabfd78b93efc09b8ef19';
 
 export async function POST(request: Request) {
   try {
@@ -14,40 +14,52 @@ export async function POST(request: Request) {
       );
     }
 
-    // Verify it's an image
+    // Verificar que sea una imagen
     if (!file.type.startsWith('image/')) {
       return NextResponse.json(
-        { error: 'El archivo debe ser una imagen (PNG, JPG, WEBP, etc.).' },
+        { error: 'El archivo debe ser una imagen válida (PNG, JPG, WEBP, etc.).' },
         { status: 400 }
       );
     }
 
-    const bytes = await file.arrayBuffer();
-    const buffer = Buffer.from(bytes);
+    // Enviar directamente a la API de ImgBB sin escribir en el sistema de archivos local
+    const imgbbForm = new FormData();
+    imgbbForm.append('image', file, file.name);
 
-    // Clean file name
-    const sanitizedName = file.name.replace(/[^a-zA-Z0-9.-]/g, '_');
-    const filename = `${Date.now()}-${sanitizedName}`;
+    const uploadUrl = `https://api.imgbb.com/1/upload?key=${IMGBB_API_KEY}`;
+    const imgbbRes = await fetch(uploadUrl, {
+      method: 'POST',
+      headers: {
+        'User-Agent':
+          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+      },
+      body: imgbbForm,
+    });
 
-    // Local Storage: Save in /public/uploads/
-    const uploadDir = path.join(process.cwd(), 'public', 'uploads');
-    await mkdir(uploadDir, { recursive: true });
+    const data = await imgbbRes.json();
 
-    const filePath = path.join(uploadDir, filename);
-    await writeFile(filePath, buffer);
+    if (!imgbbRes.ok || !data?.success) {
+      const errorMsg = data?.error?.message || 'Error desconocido al subir a ImgBB.';
+      console.error('Error devuelto por ImgBB:', data);
+      return NextResponse.json(
+        { error: `Error en ImgBB: ${errorMsg}` },
+        { status: 502 }
+      );
+    }
 
-    const localUrl = `/uploads/${filename}`;
+    // Obtener la URL directa de la imagen alojada en CDN (i.ibb.co)
+    const directImageUrl = data.data.display_url || data.data.url;
 
     return NextResponse.json({
       success: true,
-      url: localUrl,
-      filename,
-      source: 'local',
+      url: directImageUrl,
+      filename: file.name,
+      source: 'imgbb',
     });
   } catch (error: any) {
-    console.error('Error en /api/upload:', error);
+    console.error('Error general en /api/upload:', error);
     return NextResponse.json(
-      { error: 'Error del servidor: ' + (error?.message || String(error)) },
+      { error: 'Error del servidor al procesar la imagen: ' + (error?.message || String(error)) },
       { status: 500 }
     );
   }
