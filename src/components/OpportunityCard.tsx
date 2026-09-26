@@ -71,11 +71,6 @@ export default function OpportunityCard({ opportunity, compact = false }: Opport
     <article className="featured-card">
       <Link href={`/opportunities/${slug}`} style={{ textDecoration: 'none' }}>
         <div className="card-banner" style={bannerStyle}>
-          {/* Overlay to ensure text readability if there's an image */}
-          {opportunity.bannerImageUrl && (
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.3) 100%)', zIndex: 0 }} />
-          )}
-
           <div className="card-banner-top" style={{ position: 'relative', zIndex: 1 }}>
             <span className="banner-institution-badge">
               {institutionLogoText || institution}
@@ -99,12 +94,12 @@ export default function OpportunityCard({ opportunity, compact = false }: Opport
           <h2 className="card-title">{title}</h2>
 
           <div className="card-meta">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-              <MapPin size={14} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '5px', minWidth: 0 }}>
+              <MapPin size={14} style={{ flexShrink: 0 }} />
               <span>{country}</span>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-              <Calendar size={14} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '5px', flexShrink: 0 }}>
+              <Calendar size={14} style={{ flexShrink: 0 }} />
               <span>{formattedDeadline}</span>
             </div>
           </div>

@@ -74,7 +74,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         <div 
           style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', 
+            gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 290px), 1fr))', 
             gap: '24px' 
           }}
         >

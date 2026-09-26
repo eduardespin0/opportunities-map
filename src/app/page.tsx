@@ -96,10 +96,6 @@ export default async function HomePage() {
                   className="course-card"
                   style={bannerStyle}
                 >
-                  {/* Overlay to ensure text readability if there's an image */}
-                  {opp.bannerImageUrl && (
-                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.4) 100%)', zIndex: 0, borderRadius: 'inherit' }} />
-                  )}
                   <div className="card-banner-top" style={{ position: 'relative', zIndex: 1 }}>
                     <span className="banner-institution-badge">
                       {opp.institutionLogoText || opp.institution}
@@ -117,10 +113,10 @@ export default async function HomePage() {
                   </div>
 
                   <div className="course-card-content" style={{ position: 'relative', zIndex: 1 }}>
-                    <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '8px', lineHeight: 1.3 }}>
+                    <h3 className="course-card-title">
                       {opp.title}
                     </h3>
-                    <p style={{ fontSize: '0.88rem', opacity: 0.85, display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <p className="course-card-meta">
                       <span>{opp.country}</span>
                       <span>•</span>
                       <span style={{ textTransform: 'capitalize' }}>
@@ -172,10 +168,6 @@ export default async function HomePage() {
                   className="course-card"
                   style={bannerStyle}
                 >
-                  {/* Overlay to ensure text readability if there's an image */}
-                  {course.bannerImageUrl && (
-                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.4) 100%)', zIndex: 0, borderRadius: 'inherit' }} />
-                  )}
                   <div className="card-banner-top" style={{ position: 'relative', zIndex: 1 }}>
                     <span className="banner-institution-badge">
                       {course.institutionLogoText || course.institution}
@@ -186,10 +178,10 @@ export default async function HomePage() {
                   </div>
 
                   <div className="course-card-content" style={{ position: 'relative', zIndex: 1 }}>
-                    <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '8px', lineHeight: 1.3 }}>
+                    <h3 className="course-card-title">
                       {course.title}
                     </h3>
-                    <p style={{ fontSize: '0.88rem', opacity: 0.85, display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <p className="course-card-meta">
                       <span>{course.duration}</span>
                       <span>•</span>
                       <span>Modalidad 100% Online</span>
@@ -237,10 +229,6 @@ export default async function HomePage() {
                   className="course-card"
                   style={bannerStyle}
                 >
-                  {/* Overlay to ensure text readability if there's an image */}
-                  {opp.bannerImageUrl && (
-                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.4) 100%)', zIndex: 0, borderRadius: 'inherit' }} />
-                  )}
                   <div className="card-banner-top" style={{ position: 'relative', zIndex: 1 }}>
                     <span className="banner-institution-badge">
                       {opp.institutionLogoText || opp.institution}
@@ -258,10 +246,10 @@ export default async function HomePage() {
                   </div>
 
                   <div className="course-card-content" style={{ position: 'relative', zIndex: 1 }}>
-                    <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '8px', lineHeight: 1.3 }}>
+                    <h3 className="course-card-title">
                       {opp.title}
                     </h3>
-                    <p style={{ fontSize: '0.88rem', opacity: 0.85, display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <p className="course-card-meta">
                       <span>{opp.country}</span>
                       <span>•</span>
                       <span>Otros</span>

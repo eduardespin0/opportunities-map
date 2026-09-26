@@ -618,11 +618,13 @@ button {
 }
 
 .card-banner {
-  height: 180px;
+  min-height: 180px;
+  height: auto;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 12px;
   padding: 16px;
   color: #ffffff;
   overflow: hidden;
@@ -638,7 +640,16 @@ button {
   z-index: 1;
 }
 
-.card-banner-top,
+.card-banner-top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 .card-banner-bottom {
   position: relative;
   z-index: 2;
@@ -657,6 +668,8 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.2);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  max-width: 100%;
+  word-break: break-word;
 }
 
 .banner-country-flag {
@@ -671,6 +684,7 @@ button {
   line-height: 1.25;
   color: #ffffff;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  word-break: break-word;
 }
 
 .card-content {
@@ -686,9 +700,10 @@ button {
   line-height: 1.35;
   color: var(--text-primary);
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  word-break: break-word;
 }
 
 .card-title:hover {
@@ -699,8 +714,15 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 12px;
   font-size: 0.82rem;
   color: var(--text-muted);
+}
+
+.card-meta > div {
+  min-width: 0;
+  word-break: break-word;
 }
 
 .card-badges {
@@ -787,22 +809,27 @@ button {
 }
 
 .compact-title {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.35;
   color: var(--text-primary);
-  white-space: nowrap;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis;
+  word-break: break-word;
 }
 
 .compact-sub {
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
   display: flex;
   align-items: center;
-  gap: 6px;
-  margin-top: 2px;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  margin-top: 4px;
+  line-height: 1.35;
 }
 
 /* Courses Horizontal Section */
@@ -842,13 +869,15 @@ button {
   position: relative;
   border-radius: var(--radius-md);
   overflow: hidden;
-  height: 200px;
+  min-height: 200px;
+  height: auto;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 16px;
   padding: 24px;
   color: #ffffff;
   background-size: cover;
@@ -872,6 +901,23 @@ button {
 .course-card-content {
   position: relative;
   z-index: 2;
+}
+
+.course-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.course-card-meta {
+  font-size: 0.88rem;
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 8px;
 }
 
 @media (max-width: 768px) {
@@ -898,8 +944,31 @@ button {
 
   .course-card {
     height: auto;
-    min-height: 180px;
+    min-height: auto;
     padding: 18px 16px;
+    gap: 14px;
+  }
+
+  .course-card-title {
+    font-size: 1.05rem;
+    line-height: 1.35;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    line-height: 1.4;
+    display: block;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+  }
+
+  .compact-title {
+    font-size: 0.92rem;
+    line-height: 1.4;
+    display: block;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+    white-space: normal;
   }
 }
 
@@ -1103,6 +1172,24 @@ button {
 @media (max-width: 640px) {
   .specs-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .detail-header-card,
+  .content-section,
+  .specs-box,
+  .cta-box {
+    padding: 20px 16px;
+  }
+
+  .detail-title {
+    font-size: 1.55rem;
+    line-height: 1.3;
+    word-break: break-word;
+  }
+
+  .detail-badges {
+    gap: 8px;
   }
 }
 
@@ -1110,6 +1197,12 @@ button {
   display: flex;
   align-items: flex-start;
   gap: 10px;
+  min-width: 0;
+}
+
+.spec-item > div {
+  min-width: 0;
+  flex: 1;
 }
 
 .spec-icon {
@@ -1130,6 +1223,8 @@ button {
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--text-primary);
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Rich Content Card */
@@ -1346,15 +1441,19 @@ button {
   border: 1px solid var(--border-subtle);
   background: var(--bg-subtle);
   box-shadow: var(--shadow-md);
-  max-height: 440px;
+  max-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .detail-cover-img {
   width: 100%;
-  height: 100%;
-  max-height: 440px;
+  height: auto;
+  max-height: 480px;
   object-fit: cover;
   display: block;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 /* ==========================================================================

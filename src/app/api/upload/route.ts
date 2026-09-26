@@ -47,8 +47,8 @@ export async function POST(request: Request) {
       );
     }
 
-    // Obtener la URL directa de la imagen alojada en CDN (i.ibb.co)
-    const directImageUrl = data.data.display_url || data.data.url;
+    // Obtener la URL directa original de máxima calidad (evitando la versión comprimida 'display_url')
+    const directImageUrl = data.data.image?.url || data.data.url || data.data.display_url;
 
     return NextResponse.json({
       success: true,
