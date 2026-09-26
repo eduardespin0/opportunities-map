@@ -70,19 +70,23 @@ export default function OpportunityCard({ opportunity, compact = false }: Opport
   return (
     <article className="featured-card">
       <Link href={`/opportunities/${slug}`} style={{ textDecoration: 'none' }}>
-        <div className="card-banner" style={bannerStyle}>
-          <div className="card-banner-top" style={{ position: 'relative', zIndex: 1 }}>
-            <span className="banner-institution-badge">
-              {institutionLogoText || institution}
-            </span>
-            <span className="banner-country-flag" title={country}>
-              {countryFlag}
-            </span>
-          </div>
+        <div className={`card-banner ${opportunity.bannerImageUrl ? 'card-banner--has-image' : ''}`} style={bannerStyle}>
+          {!opportunity.bannerImageUrl && (
+            <>
+              <div className="card-banner-top" style={{ position: 'relative', zIndex: 1 }}>
+                <span className="banner-institution-badge">
+                  {institutionLogoText || institution}
+                </span>
+                <span className="banner-country-flag" title={country}>
+                  {countryFlag}
+                </span>
+              </div>
 
-          <div className="card-banner-bottom" style={{ position: 'relative', zIndex: 1 }}>
-            <h3 className="banner-headline">{shortTitle}</h3>
-          </div>
+              <div className="card-banner-bottom" style={{ position: 'relative', zIndex: 1 }}>
+                <h3 className="banner-headline">{shortTitle}</h3>
+              </div>
+            </>
+          )}
         </div>
 
         <div className="card-content">

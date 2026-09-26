@@ -640,6 +640,10 @@ button {
   z-index: 1;
 }
 
+.card-banner--has-image::after {
+  display: none !important;
+}
+
 .card-banner-top {
   position: relative;
   z-index: 2;
@@ -891,6 +895,31 @@ button {
   inset: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.85) 100%);
   z-index: 1;
+}
+
+.course-card--has-image::after {
+  display: none !important;
+}
+
+.course-card--has-image {
+  aspect-ratio: 16 / 9;
+  min-height: 190px;
+  padding: 0;
+  border: 1px solid var(--border-subtle);
+  background-size: cover;
+  background-position: center;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .course-card:hover {

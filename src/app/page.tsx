@@ -80,7 +80,8 @@ export default async function HomePage() {
                 ? `linear-gradient(135deg, ${opp.bannerTheme.primaryColor} 0%, #15241e 100%)`
                 : 'linear-gradient(135deg, var(--brand-primary) 0%, #15241e 100%)';
 
-              const bannerStyle: React.CSSProperties = opp.bannerImageUrl
+              const hasImage = Boolean(opp.bannerImageUrl);
+              const bannerStyle: React.CSSProperties = hasImage
                 ? { 
                     backgroundImage: `url(${opp.bannerImageUrl})`, 
                     backgroundSize: 'cover', 
@@ -93,39 +94,46 @@ export default async function HomePage() {
                 <Link
                   key={opp.id}
                   href={`/opportunities/${opp.slug}`}
-                  className="course-card"
+                  className={`course-card ${hasImage ? 'course-card--has-image' : ''}`}
                   style={bannerStyle}
+                  title={opp.title}
                 >
-                  <div className="card-banner-top" style={{ position: 'relative', zIndex: 1 }}>
-                    <span className="banner-institution-badge">
-                      {opp.institutionLogoText || opp.institution}
-                    </span>
-                    <span 
-                      className="badge-funded" 
-                      style={{ 
-                        background: opp.fundingType === 'Fully Funded' ? '#10b981' : 'var(--bg-elevated)', 
-                        color: opp.fundingType === 'Fully Funded' ? '#ffffff' : 'var(--text-primary)', 
-                        border: 'none' 
-                      }}
-                    >
-                      {opp.fundingType}
-                    </span>
-                  </div>
+                  {hasImage ? (
+                    <span className="sr-only">{opp.title}</span>
+                  ) : (
+                    <>
+                      <div className="card-banner-top" style={{ position: 'relative', zIndex: 1 }}>
+                        <span className="banner-institution-badge">
+                          {opp.institutionLogoText || opp.institution}
+                        </span>
+                        <span 
+                          className="badge-funded" 
+                          style={{ 
+                            background: opp.fundingType === 'Fully Funded' ? '#10b981' : 'var(--bg-elevated)', 
+                            color: opp.fundingType === 'Fully Funded' ? '#ffffff' : 'var(--text-primary)', 
+                            border: 'none' 
+                          }}
+                        >
+                          {opp.fundingType}
+                        </span>
+                      </div>
 
-                  <div className="course-card-content" style={{ position: 'relative', zIndex: 1 }}>
-                    <h3 className="course-card-title">
-                      {opp.title}
-                    </h3>
-                    <p className="course-card-meta">
-                      <span>{opp.country}</span>
-                      <span>•</span>
-                      <span style={{ textTransform: 'capitalize' }}>
-                        {opp.category === 'scholarships' ? 'Beca' : 
-                         opp.category === 'internships' ? 'Pasantía' : 
-                         opp.category === 'fellowships' ? 'Fellowship' : 'Curso'}
-                      </span>
-                    </p>
-                  </div>
+                      <div className="course-card-content" style={{ position: 'relative', zIndex: 1 }}>
+                        <h3 className="course-card-title">
+                          {opp.title}
+                        </h3>
+                        <p className="course-card-meta">
+                          <span>{opp.country}</span>
+                          <span>•</span>
+                          <span style={{ textTransform: 'capitalize' }}>
+                            {opp.category === 'scholarships' ? 'Beca' : 
+                             opp.category === 'internships' ? 'Pasantía' : 
+                             opp.category === 'fellowships' ? 'Fellowship' : 'Curso'}
+                          </span>
+                        </p>
+                      </div>
+                    </>
+                  )}
                 </Link>
               );
             })}
@@ -213,7 +221,8 @@ export default async function HomePage() {
                 ? `linear-gradient(135deg, ${opp.bannerTheme.primaryColor} 0%, #15241e 100%)`
                 : 'linear-gradient(135deg, var(--brand-primary) 0%, #15241e 100%)';
 
-              const bannerStyle: React.CSSProperties = opp.bannerImageUrl
+              const hasImage = Boolean(opp.bannerImageUrl);
+              const bannerStyle: React.CSSProperties = hasImage
                 ? { 
                     backgroundImage: `url(${opp.bannerImageUrl})`, 
                     backgroundSize: 'cover', 
@@ -226,35 +235,42 @@ export default async function HomePage() {
                 <Link
                   key={opp.id}
                   href={`/opportunities/${opp.slug}`}
-                  className="course-card"
+                  className={`course-card ${hasImage ? 'course-card--has-image' : ''}`}
                   style={bannerStyle}
+                  title={opp.title}
                 >
-                  <div className="card-banner-top" style={{ position: 'relative', zIndex: 1 }}>
-                    <span className="banner-institution-badge">
-                      {opp.institutionLogoText || opp.institution}
-                    </span>
-                    <span 
-                      className="badge-funded" 
-                      style={{ 
-                        background: opp.fundingType === 'Fully Funded' ? '#10b981' : 'var(--bg-elevated)', 
-                        color: opp.fundingType === 'Fully Funded' ? '#ffffff' : 'var(--text-primary)', 
-                        border: 'none' 
-                      }}
-                    >
-                      {opp.fundingType}
-                    </span>
-                  </div>
+                  {hasImage ? (
+                    <span className="sr-only">{opp.title}</span>
+                  ) : (
+                    <>
+                      <div className="card-banner-top" style={{ position: 'relative', zIndex: 1 }}>
+                        <span className="banner-institution-badge">
+                          {opp.institutionLogoText || opp.institution}
+                        </span>
+                        <span 
+                          className="badge-funded" 
+                          style={{ 
+                            background: opp.fundingType === 'Fully Funded' ? '#10b981' : 'var(--bg-elevated)', 
+                            color: opp.fundingType === 'Fully Funded' ? '#ffffff' : 'var(--text-primary)', 
+                            border: 'none' 
+                          }}
+                        >
+                          {opp.fundingType}
+                        </span>
+                      </div>
 
-                  <div className="course-card-content" style={{ position: 'relative', zIndex: 1 }}>
-                    <h3 className="course-card-title">
-                      {opp.title}
-                    </h3>
-                    <p className="course-card-meta">
-                      <span>{opp.country}</span>
-                      <span>•</span>
-                      <span>Otros</span>
-                    </p>
-                  </div>
+                      <div className="course-card-content" style={{ position: 'relative', zIndex: 1 }}>
+                        <h3 className="course-card-title">
+                          {opp.title}
+                        </h3>
+                        <p className="course-card-meta">
+                          <span>{opp.country}</span>
+                          <span>•</span>
+                          <span>Otros</span>
+                        </p>
+                      </div>
+                    </>
+                  )}
                 </Link>
               );
             })}
