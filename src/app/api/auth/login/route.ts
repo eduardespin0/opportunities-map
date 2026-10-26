@@ -6,8 +6,16 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { username, password } = body;
 
-    const expectedUsername = process.env.ADMIN_USERNAME || 'admin';
-    const expectedPassword = process.env.ADMIN_PASSWORD || 'admin123';
+    const expectedUsername = process.env.ADMIN_USERNAME;
+    const expectedPassword = process.env.ADMIN_PASSWORD;
+
+    if (!expectedUsername || !expectedPassword) {
+      console.error('ADMIN_USERNAME o ADMIN_PASSWORD no están definidos en las variables de entorno.');
+      return NextResponse.json(
+        { error: 'Configuración del servidor incompleta.' },
+        { status: 500 }
+      );
+    }
 
     if (!username || !password) {
       return NextResponse.json(

@@ -3,7 +3,12 @@ import { SignJWT, jwtVerify } from 'jose';
 export const AUTH_COOKIE_NAME = 'oppmaps_admin_token';
 
 function getJwtSecretKey(): Uint8Array {
-  const secret = process.env.JWT_SECRET || 'opportunity_maps_super_secret_jwt_key_2026_secure!';
+  const secret = process.env.JWT_SECRET;
+  if (!secret) {
+    throw new Error(
+      'JWT_SECRET no está definido. Agrega JWT_SECRET a tu archivo .env.local'
+    );
+  }
   return new TextEncoder().encode(secret);
 }
 

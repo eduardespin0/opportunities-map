@@ -1,95 +1,86 @@
-# 🧭 OpportunitiesMap
+# OpportunitiesMap
 
-> **Mapping Global Opportunities for Ambitious Minds**  
-> Portal digital de alto rendimiento y arquitectura moderna para la difusión de becas universitarias, pasantías científicas, programas de liderazgo y cursos certificados de todo el mundo.
+Portal web para difundir becas, pasantías, fellowships y cursos gratuitos de todo el mundo.
+Centraliza convocatorias legítimas con enlaces directos al portal oficial de cada institución.
 
-[![Next.js](https://img.shields.io/badge/Next.js-15+-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
-[![SEO Ready](https://img.shields.io/badge/SEO-JSON--LD%20%26%20AdSense-orange?style=for-the-badge)](https://schema.org)
-
----
-
-## 🌟 Resumen del Proyecto
-
-**OpportunitiesMap** surge para democratizar el acceso a la educación superior y las oportunidades de financiamiento global. Inspirado en la arquitectura funcional de comunidades como *OpportunitiesPedia* y *Opportunities Corners*, eleva el estándar hacia una experiencia de software premium, limpia, de ultra-alta velocidad y orientada al usuario contemporáneo.
-
-### Pilares Fundamentales:
-1. **Difusión 100% Informativa:** Centralización de convocatorias legítimas con enlaces directos al portal oficial de cada organismo. No ofrecemos consultorías ni asesorías de trámite.
-2. **Sinergia con Instagram y Canva Pro:** Sistema de banners y carruseles estandarizados para publicar simultáneamente en redes sociales y en la web con una sola fuente de datos.
-3. **Pipeline de Ingesta con IA (`scripts/ingest.mjs`):** Script potenciado por Google Gemini API que convierte convocatorias en bruto en archivos estructurados y redacta el copy con hashtags para Instagram.
-4. **Preparado para Monetización Sostenible:** Arquitectura técnica optimizada para **Google AdSense** (páginas legales de privacidad, descargo de responsabilidad, términos y about us), además de boletín de alertas por correo.
-5. **Código de Nivel Académico y Profesional:** Estructura modular y fuertemente tipada en TypeScript diseñada para servir de respaldo en admisiones de posgrado y entrevistas de ingeniería de software.
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-7-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![Firebase](https://img.shields.io/badge/Firebase-Firestore-orange?style=flat-square&logo=firebase)](https://firebase.google.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
 
 ---
 
-## 🏗️ Arquitectura del Sistema
+## Stack tecnológico
+
+| Capa | Tecnología |
+|------|-----------|
+| Framework | Next.js 16 (App Router) |
+| Lenguaje | TypeScript 7 |
+| Base de datos | Cloud Firestore (con respaldo local JSON) |
+| Auth admin | JWT con `jose` (credenciales vía env vars) |
+| Iconos | Lucide React |
+| Estilos | CSS vanilla (variables, dark/light mode) |
+| Hosting | Firebase Hosting (configurado) |
+
+---
+
+## Estructura del proyecto
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                       OpportunitiesMap                      │
-├──────────────────────────────┬──────────────────────────────┤
-│         FRONTEND WEB         │        PIPELINE DE IA        │
-│   Next.js (App Router, SSG)  │   Google Gemini 2.5 Flash    │
-│   TypeScript + CSS Moderno   │  Extracción de convocatorias │
-│   Lighthouse 100 / Subseg    │  Generador de Copy Instagram │
-├──────────────────────────────┴──────────────────────────────┤
-│                     CAPA DE CONTENIDOS                      │
-│       Esquemas tipados + Modelo estructurado en Git         │
-│   (Versionado en GitHub, cero costo de BD para arrancar)    │
-├─────────────────────────────────────────────────────────────┤
-│                 INFRAESTRUCTURA Y MONETIZACIÓN              │
-│       Vercel / Cloudflare Pages (Hosting gratuito)          │
-│       Google AdSense ready + Newsletter de Alertas          │
-└─────────────────────────────────────────────────────────────┘
-```
-
----
-
-## 🚀 Características Principales
-
-- ⚡ **Velocidad Extrema (SSG):** Todas las páginas se pre-renderizan a HTML puro en tiempo de compilación para tiempos de carga inferiores a 500 ms.
-- 🌓 **Modo Oscuro y Modo Claro:** Sistema de temas nativo mediante variables CSS con persistencia en `localStorage`.
-- 🔍 **Buscador y Filtros en Vivo:** Filtrado instantáneo por texto, categoría (*Scholarships, Internships, Fellowships, Online Courses*), financiamiento (*Fully Funded, Partially Funded*) y país de destino.
-- 📋 **Ficha Técnica (*SpecsBox*):** Cuadro de datos rápidos en cada convocatoria destacando país, institución, duración, cobertura económica y fecha límite.
-- 📌 **Barra de Lectura Fija:** Barra superior con indicador de lectura y botones de compartir con un clic (WhatsApp, X / Twitter, LinkedIn, Copiar enlace).
-- 🛡️ **Avisos Legales Transparentes:** Banner permanente y páginas dedicadas de *Disclaimer*, *Privacy Policy* y *Terms of Service* que garantizan el cumplimiento de las directrices de Google AdSense.
-
----
-
-## 📁 Estructura del Proyecto
-
-```
-proyecto-oppmaps/
+opportunities-map/
 ├── src/
 │   ├── app/
-│   │   ├── layout.tsx              # Shell principal, Navbar, Footer y SEO global
-│   │   ├── page.tsx                # Página de inicio con Grid Multicolumna
-│   │   ├── globals.css             # Tokens de diseño, Dark/Light mode y estilos
+│   │   ├── layout.tsx              # Shell principal, Navbar, Footer, SEO
+│   │   ├── page.tsx                # Home — grid por categorías
+│   │   ├── globals.css             # Tokens de diseño, dark/light mode
 │   │   ├── opportunities/
-│   │   │   ├── page.tsx            # Explorador interactivo con filtros en tiempo real
-│   │   │   └── [slug]/
-│   │   │       └── page.tsx        # Página de detalle con Ficha Técnica y Schema SEO
-│   │   ├── about/page.tsx          # Acerca de OpportunitiesMap y misión
-│   │   ├── disclaimer/page.tsx     # Descargo de responsabilidad legal
-│   │   ├── privacy/page.tsx        # Política de privacidad (Google AdSense)
-│   │   └── terms/page.tsx          # Términos y condiciones de servicio
+│   │   │   ├── page.tsx            # Explorador con filtros
+│   │   │   └── [slug]/page.tsx     # Detalle de convocatoria
+│   │   ├── category/[cat]/page.tsx # Vista filtrada por categoría
+│   │   ├── admin/
+│   │   │   ├── page.tsx            # Dashboard admin (CRUD)
+│   │   │   ├── login/page.tsx      # Login admin
+│   │   │   └── opportunities/      # Formulario de creación/edición
+│   │   ├── api/
+│   │   │   ├── auth/               # Login / logout / me
+│   │   │   ├── opportunities/      # CRUD REST
+│   │   │   └── upload/             # Subida de imágenes
+│   │   ├── about/page.tsx
+│   │   ├── disclaimer/page.tsx
+│   │   ├── privacy/page.tsx
+│   │   ├── terms/page.tsx
+│   │   ├── sitemap.ts
+│   │   └── robots.ts
 │   ├── components/
-│   │   ├── Navbar.tsx              # Barra de navegación principal
-│   │   ├── Footer.tsx              # Pie de página institucional y enlaces
-│   │   ├── OpportunityCard.tsx     # Tarjeta estilo Canva Pro con bandera y badge
-│   │   ├── CategoryColumn.tsx      # Columna temática con destacada y lista
-│   │   ├── SpecsBox.tsx            # Ficha técnica estructurada
-│   │   ├── ShareBar.tsx            # Botones sociales de compartir
-│   │   ├── NewsletterBox.tsx       # Caja interactiva de captura de correo
-│   │   └── ThemeToggle.tsx         # Switch Dark / Light Mode
+│   │   ├── Navbar.tsx
+│   │   ├── Footer.tsx
+│   │   ├── OpportunityCard.tsx
+│   │   ├── CategoryColumn.tsx
+│   │   ├── SpecsBox.tsx            # Ficha técnica de la convocatoria
+│   │   ├── ShareBar.tsx            # Compartir en redes
+│   │   ├── NewsletterBox.tsx
+│   │   ├── ThemeToggle.tsx
+│   │   ├── UrgentTicker.tsx
+│   │   ├── OpportunityForm.tsx     # Formulario admin
+│   │   ├── AdminHeader.tsx
+│   │   └── AdminLogoutButton.tsx
 │   ├── data/
-│   │   └── opportunities.ts        # Base de datos semilla de oportunidades
-│   └── lib/
-│       ├── types.ts                # Interfaces y tipos de TypeScript
-│       └── opportunities.ts        # Funciones de consulta, filtrado y búsqueda
+│   │   └── opportunities.json      # Datos semilla / cache local
+│   ├── lib/
+│   │   ├── types.ts                # Interfaces TypeScript
+│   │   ├── opportunities.ts        # Queries sobre el JSON local
+│   │   ├── opportunity-store.ts    # CRUD Firestore + fallback JSON
+│   │   ├── firebase.ts             # Config Firebase client
+│   │   └── auth.ts                 # JWT helpers
+│   └── middleware.ts               # Protección de rutas /admin y API
 ├── scripts/
-│   └── ingest.mjs                  # Script CLI de ingesta con IA y generador Instagram
+│   └── ingest.py                   # Script de ingesta con Gemini API
+├── public/
+│   ├── manifest.json
+│   ├── ads.txt
+│   └── uploads/                    # Imágenes subidas desde el admin
+├── firebase.json
+├── firestore.rules
 ├── package.json
 ├── tsconfig.json
 └── next.config.mjs
@@ -97,57 +88,111 @@ proyecto-oppmaps/
 
 ---
 
-## 💻 Instalación y Uso Local
+## Funcionalidades implementadas
 
-### 1. Clonar el repositorio
-```bash
-git clone https://github.com/tu-usuario/opportunity-maps.git
-cd opportunity-maps
-```
+- **Home con grid por categorías:** Scholarships, Internships, Fellowships, Online Courses.
+- **Explorador con filtros:** búsqueda por texto, categoría, financiamiento, país y nivel académico.
+- **Página de detalle:** ficha técnica (SpecsBox), secciones de elegibilidad, beneficios, documentos requeridos, enlace oficial y oportunidades relacionadas.
+- **Panel de administración:** login con JWT, CRUD completo de oportunidades vía Firestore, subida de imágenes.
+- **Dark / Light mode:** toggle con persistencia en `localStorage`.
+- **Compartir:** botones de WhatsApp, X, LinkedIn y copiar enlace.
+- **SEO:** `sitemap.ts`, `robots.ts`, metadatos dinámicos por página.
+- **Páginas legales:** About, Disclaimer, Privacy Policy, Terms.
+- **Ticker de urgencia:** banner animado para convocatorias próximas a cerrar.
+- **Script de ingesta (Python):** recibe texto o URL de una convocatoria, usa Gemini API para extraer campos estructurados y genera el copy de Instagram con hashtags.
 
-### 2. Instalar dependencias
+---
+
+## Instalación
+
 ```bash
+git clone https://github.com/eduardespin0/opportunities-map.git
+cd opportunities-map
 npm install
 ```
 
-### 3. Iniciar el servidor de desarrollo
+### Variables de entorno
+
+Crea un archivo `.env.local`:
+
+```env
+# Firebase (obligatorio — o el código usa los valores por defecto del proyecto)
+NEXT_PUBLIC_FIREBASE_API_KEY=
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
+NEXT_PUBLIC_FIREBASE_APP_ID=
+
+# Admin auth
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD=       # cámbiala en producción
+JWT_SECRET=           # clave segura para firmar tokens
+```
+
+### Desarrollo
+
 ```bash
 npm run dev
 ```
-Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la plataforma.
 
-### 4. Compilar para producción (Build estático)
+Abre [http://localhost:3000](http://localhost:3000).
+
+### Producción
+
 ```bash
 npm run build
 npm run start
 ```
 
-### 5. Probar el Pipeline de IA para Instagram y Canva
-```bash
-# Puedes definir tu clave de API de Gemini opcionalmente:
-# export GEMINI_API_KEY="tu-api-key"
+### Ingesta con IA
 
-npm run ingest
+```bash
+pip install google-genai
+export GEMINI_API_KEY="tu-api-key"       # o set en Windows
+python scripts/ingest.py
 ```
 
 ---
 
-## 📈 Estrategia de Monetización
+## Qué hice yo y qué hizo la IA
 
-1. **Google AdSense:** La plataforma cumple con los estándares editoriales de Google: arquitectura de contenido original, páginas de privacidad y cookies, política de navegación clara y carga instantánea.
-2. **Newsletter Semanal:** Captura de correos para envío automatizado de alertas, monetizable mediante patrocinios educativos o cursos de idiomas (IELTS/TOEFL).
-3. **Marketing de Afiliados Ético:** Integración futura con seguros de viaje estudiantil, plataformas de aprendizaje y herramientas de preparación académica.
+Sección de transparencia para entrevistas técnicas.
+
+### Lo que hice yo (Eduardo)
+
+- **Concepto y diseño del producto:** definí qué problema resuelve, el público objetivo (estudiantes salvadoreños y de cualquier parte buscando becas internacionales) y la estrategia de contenidos web + Instagram.
+- **Arquitectura de datos:** diseñé el esquema `Opportunity` (los 20+ campos, categorías, tipos de financiamiento) basándome en lo que necesita alguien evaluando una beca.
+- **Curación de contenido real:** investigué y redacté las convocatorias reales (Erasmus Mundus, ETH Zurich ESOP) con datos verificados de los portales oficiales.
+- **Decisiones de stack:** elegí Next.js + Firestore + JWT por la relación costo/funcionalidad. Elegí CSS vanilla en lugar de Tailwind por control directo.
+- **Admin y flujo de publicación:** diseñé el flujo completo: login → formulario → Firestore → respaldo JSON → sitio público.
+- **Configuración de Firebase:** creé el proyecto en Firebase Console, configuré Firestore y el hosting.
+- **QA manual y responsive:** probé en móvil y escritorio, corregí errores de diseño responsive iterativamente (visible en los commits).
+- **Iteración y dirección:** revisé cada resultado de la IA, pedí correcciones y decidí qué quedaba y qué se descartaba.
+
+### Lo que hizo la IA (asistente de código)
+
+- **Generación de boilerplate:** componentes React (Navbar, Footer, Cards, SpecsBox, ShareBar), CSS global, layout de Next.js.
+- **CRUD Firestore:** el módulo `opportunity-store.ts` con operaciones de lectura/escritura y fallback a JSON local.
+- **Auth con JWT:** implementación del middleware, rutas de login/logout y verificación de token con `jose`.
+- **Formulario admin:** el componente `OpportunityForm.tsx` con validación de todos los campos.
+- **API routes:** endpoints REST para opportunities y upload de imágenes.
+- **SEO dinámico:** generación de sitemap.ts, robots.ts y metadatos OpenGraph.
+- **Script de ingesta:** el script Python que conecta con Gemini API para procesar convocatorias.
+- **Páginas legales:** contenido base de About, Disclaimer, Privacy y Terms.
+
+### En resumen
+
+Yo definí **qué** construir y **por qué**. La IA fue mi herramienta para el **cómo** — escribió código que yo revisé, corregí y decidí mantener. Es como usar un IDE avanzado: la herramienta no toma decisiones de producto.
 
 ---
 
-## ⚖️ Descargo de Responsabilidad (Disclaimer)
+## Descargo de responsabilidad
 
-OpportunitiesMap es un proyecto de carácter estrictamente informativo. No cobramos comisiones ni garantizamos admisiones. Todas las postulaciones se procesan de forma directa a través de los canales oficiales de las instituciones convocantes.
+OpportunitiesMap es un proyecto informativo. No cobramos comisiones ni garantizamos admisiones. Todas las postulaciones se procesan directamente en los portales oficiales de cada institución.
 
 ---
 
-## 👨‍💻 Autor y Licencia
+## Licencia
 
-Desarrollado como proyecto de código abierto para demostrar competencias en ingeniería de software, arquitectura web moderna e integración con modelos de lenguaje.
-
-Distribuido bajo la Licencia **MIT**. Consulta el archivo `LICENSE` para más detalles.
+MIT — ver [LICENSE](LICENSE).
